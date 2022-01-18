@@ -1,0 +1,14 @@
+name: Python Package using Conda
+
+on: [push]
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 5
+
+    steps:
+    - uses: goanpeca/napari-plugin-action@main
+      with:
+        package_name: napari-svg
